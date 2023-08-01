@@ -17,10 +17,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/macor161/ts-money.git"
+    "url": "git://github.com/CandisIO/ts-money.git"
   },
   "bugs": {
-    "url": "https://github.com/macor161/ts-money/issues"
+    "url": "https://github.com/CandisIO/ts-money/issues"
   },
   "dependencies": {
     "lodash": "^4.17.5"
