@@ -1,6 +1,6 @@
 import { Currency } from './lib/currency';
 import { Currencies } from './lib/currencies';
-export declare type Rounder = 'round' | 'floor' | 'ceil' | Function;
+export type Rounder = 'round' | 'floor' | 'ceil' | Function;
 export interface Amount {
     amount: number;
     currency: string | Currency;

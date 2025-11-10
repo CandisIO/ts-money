@@ -338,7 +338,7 @@ export const Currencies: Record<string, Currency> = {
     symbol: 'CO$',
     name: 'Colombian Peso',
     symbol_native: '$',
-    decimal_digits: 0,
+    decimal_digits: 2,
     rounding: 0,
     code: 'COP',
     name_plural: 'Colombian pesos',

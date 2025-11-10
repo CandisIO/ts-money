@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Currencies = exports.Money = void 0;
 const lodash_1 = require("lodash");
 const currencies_1 = require("./lib/currencies");
-exports.Currencies = currencies_1.Currencies;
+Object.defineProperty(exports, "Currencies", { enumerable: true, get: function () { return currencies_1.Currencies; } });
 let isInt = function (n) {
     return Number(n) === n && n % 1 === 0;
 };
@@ -21,7 +22,7 @@ let assertType = function (other) {
         throw new TypeError('Instance of Money required');
 };
 let assertOperand = function (operand) {
-    if (lodash_1.isNaN(parseFloat(operand)) && !isFinite(operand))
+    if ((0, lodash_1.isNaN)(parseFloat(operand)) && !isFinite(operand))
         throw new TypeError('Operand must be a number');
 };
 let getCurrencyObject = function (currency) {
@@ -37,7 +38,7 @@ let getCurrencyObject = function (currency) {
     }
 };
 function isAmountObject(amount) {
-    return lodash_1.isObject(amount);
+    return (0, lodash_1.isObject)(amount);
 }
 class Money {
     /**
@@ -50,9 +51,9 @@ class Money {
      * @constructor
      */
     constructor(amount, currency) {
-        if (lodash_1.isString(currency))
+        if ((0, lodash_1.isString)(currency))
             currency = getCurrencyObject(currency);
-        if (!lodash_1.isPlainObject(currency))
+        if (!(0, lodash_1.isPlainObject)(currency))
             throw new TypeError('Invalid currency');
         if (!isInt(amount))
             throw new TypeError('Amount must be an integer');
@@ -79,9 +80,9 @@ class Money {
             currency = amount.currency;
             amount = amount.amount;
         }
-        if (lodash_1.isString(currency))
+        if ((0, lodash_1.isString)(currency))
             currency = getCurrencyObject(currency);
-        if (!lodash_1.isPlainObject(currency))
+        if (!(0, lodash_1.isPlainObject)(currency))
             throw new TypeError('Invalid currency');
         if (rounder === undefined) {
             let decimals = decimalPlaces(amount);
@@ -93,7 +94,7 @@ class Money {
         else {
             if (['round', 'floor', 'ceil'].indexOf(rounder) === -1 && typeof rounder !== 'function')
                 throw new TypeError('Invalid parameter rounder');
-            if (lodash_1.isString(rounder))
+            if ((0, lodash_1.isString)(rounder))
                 rounder = Math[rounder];
         }
         let precisionMultiplier = Math.pow(10, currency.decimal_digits);
@@ -145,7 +146,7 @@ class Money {
      * @returns {Money}
      */
     multiply(multiplier, fn) {
-        if (!lodash_1.isFunction(fn))
+        if (!(0, lodash_1.isFunction)(fn))
             fn = Math.round;
         assertOperand(multiplier);
         let amount = fn(this.amount * multiplier);
@@ -159,7 +160,7 @@ class Money {
      * @returns {Money}
      */
     divide(divisor, fn) {
-        if (!lodash_1.isFunction(fn))
+        if (!(0, lodash_1.isFunction)(fn))
             fn = Math.round;
         assertOperand(divisor);
         let amount = fn(this.amount / divisor);

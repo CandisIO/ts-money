@@ -1,5 +1,6 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
+exports.Currencies = void 0;
 exports.Currencies = {
   USD: {
     symbol: 'US$',
@@ -338,7 +339,7 @@ exports.Currencies = {
     symbol: 'CO$',
     name: 'Colombian Peso',
     symbol_native: '$',
-    decimal_digits: 0,
+    decimal_digits: 2,
     rounding: 0,
     code: 'COP',
     name_plural: 'Colombian pesos',
