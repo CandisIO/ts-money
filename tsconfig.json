@@ -14,9 +14,7 @@
         "paths": {
             "*": ["*"]
         },
-        "typeRoots": [
-        ],
-        "types": ["node"]
+        "typeRoots": ["node_modules/@types"],
     },
     "include": [
         "index.ts"

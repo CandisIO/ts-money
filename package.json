@@ -1,7 +1,7 @@
 {
   "name": "ts-money",
   "description": "Typescript port of js-money. Implementation of the Money value object.",
-  "version": "0.4.9",
+  "version": "0.5.0",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
   "author": {
@@ -26,11 +26,11 @@
     "lodash": "^4.17.5"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.64",
-    "@types/node": "^7.0.23",
+    "@types/lodash": "^4.17.20",
+    "@types/node": "22.13.0",
     "chai": "1.x.x",
     "mocha": "^10.0.0",
-    "typescript": "^2.3.4"
+    "typescript": "^5.9.3"
   },
   "scripts": {
     "build": "./node_modules/.bin/tsc",
