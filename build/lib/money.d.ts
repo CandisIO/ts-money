@@ -55,4 +55,4 @@ declare class Money {
     getCurrency(): string;
     getCurrencyInfo(): Currency;
 }
-export { Money };
+export { Money, Amount };
