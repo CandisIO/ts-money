@@ -311,4 +311,4 @@ class Money {
 
 Object.assign(Money, Currencies);
 
-export { Money };
+export { Money, Amount };
