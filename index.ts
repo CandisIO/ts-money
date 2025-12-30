@@ -4,6 +4,6 @@ export {
   Currency,
   CurrencyCode,
   DEFAULT_CURRENCY,
-  DEFAULT_CURRENCY_PRECISION,
+  DEFAULT_CURRENCY_CODE,
   Currencies,
 } from "./lib";
