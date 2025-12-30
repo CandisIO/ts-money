@@ -1,11 +1,11 @@
 import { Currency } from "./currency";
 type MathFunction = (num: number) => number;
-export type Rounder = "round" | "floor" | "ceil" | MathFunction;
-export interface Amount {
+type Rounder = "round" | "floor" | "ceil" | MathFunction;
+interface Amount {
     amount: number;
     currency: string | Currency;
 }
-export declare class Money {
+declare class Money {
     amount: number;
     currency: string;
     constructor(amount: number, currency: Currency | string);
@@ -55,4 +55,4 @@ export declare class Money {
     getCurrency(): string;
     getCurrencyInfo(): Currency;
 }
-export {};
+export { Money };

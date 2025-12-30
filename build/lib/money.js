@@ -218,3 +218,4 @@ class Money {
     }
 }
 exports.Money = Money;
+Object.assign(Money, currencies_1.Currencies);

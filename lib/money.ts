@@ -3,9 +3,9 @@ import { Currencies } from "./currencies";
 import { Currency } from "./currency";
 
 type MathFunction = (num: number) => number;
-export type Rounder = "round" | "floor" | "ceil" | MathFunction;
+type Rounder = "round" | "floor" | "ceil" | MathFunction;
 
-export interface Amount {
+interface Amount {
   amount: number;
   currency: string | Currency;
 }
@@ -61,7 +61,7 @@ const getCurrencyObject = (currency: string): Currency => {
 const isAmountObject = (amount: number | Amount): amount is Amount =>
   isObject(amount);
 
-export class Money {
+class Money {
   amount: number;
   currency: string;
 
@@ -308,3 +308,7 @@ export class Money {
     return getCurrencyObject(this.currency);
   }
 }
+
+Object.assign(Money, Currencies);
+
+export { Money };
