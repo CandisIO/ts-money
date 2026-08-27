@@ -257,7 +257,7 @@ export const Currencies: Record<string, Currency> = {
     symbol: 'Br',
     name: 'Belarusian Ruble',
     symbol_native: 'Br',
-    decimal_digits: 0,
+    decimal_digits: 2,
     rounding: 0,
     code: 'BYN',
     name_plural: 'Belarusian rubles',
